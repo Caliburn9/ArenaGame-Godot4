@@ -1,11 +1,32 @@
 extends Node
 
+# Create character variable
+# The setter and getter functions assert false to 
+# create a "false private" variable that cannot
+# be accessed outside the script
+var character = null:
+	set(value):
+		assert(false)
+	get:
+		assert(false)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var characterInstance
+var characterScene: PackedScene = preload("res://Character/Character.tscn")
 
+# Instantiate the character into the scene
+func create_character():
+	characterInstance = characterScene.instantiate()
+	character = characterInstance
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+# Destroy character
+func destroy_character():
+	if character != null:
+		characterInstance.queue_free()
+		remove_character()
+
+# Remove the character reference
+func remove_character():
+	character = null
+
+#region handling input 
+#endregion
