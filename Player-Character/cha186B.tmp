@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdwl0kvu6jx3f"]
+[gd_scene load_steps=8 format=3 uid="uid://cdwl0kvu6jx3f"]
 
 [ext_resource type="Script" path="res://Player-Character/character.gd" id="1_rgojf"]
 [ext_resource type="Texture2D" uid="uid://cnduspjsl7j6p" path="res://Player-Character/Character.png" id="2_316bv"]
-[ext_resource type="PackedScene" uid="uid://c1gevcoxoirgk" path="res://Player-Character/camera.tscn" id="3_d87le"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fhn5q"]
 atlas = ExtResource("2_316bv")
@@ -41,7 +40,6 @@ animations = [{
 }]
 
 [node name="Character" type="CharacterBody2D"]
-y_sort_enabled = true
 script = ExtResource("1_rgojf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -49,5 +47,4 @@ sprite_frames = SubResource("SpriteFrames_cppra")
 frame = 2
 frame_progress = 0.479243
 
-[node name="Camera" parent="." instance=ExtResource("3_d87le")]
-zoom = Vector2(1.5, 1.5)
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]

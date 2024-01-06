@@ -8,9 +8,14 @@ enum States {
 
 # Onready variables
 @onready var sprite = $AnimatedSprite2D
+@onready var camera = $Camera
 
 # Variable
 var state: States = States.MOVE
+var top_left_x = 0
+var top_left_y = 0
+var bottom_right_x = 0
+var bottom_right_y = 0
 
 # Movement constants
 const MAX_SPEED = 50
@@ -80,6 +85,10 @@ func hurt_state() -> void:
 	pass
 #endregion
 
+func _ready() -> void:
+	# Find a better place to initialize camera limits
+	set_camera_limit_positions(top_left_x, top_left_y, bottom_right_x, bottom_right_y)
+
 func _physics_process(delta: float) -> void:
 	match (state):
 		States.MOVE:
@@ -88,3 +97,8 @@ func _physics_process(delta: float) -> void:
 			attack_state()
 		States.HURT:
 			hurt_state()
+
+func set_camera_limit_positions(tl_x, tl_y, br_x, br_y):
+	camera.set_top_left_positions(tl_x, tl_y)
+	camera.set_bottom_right_positions(br_x, br_y)
+	camera.set_limit_positions()
