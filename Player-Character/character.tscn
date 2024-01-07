@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Player-Character/character.gd" id="1_rgojf"]
 [ext_resource type="Texture2D" uid="uid://cnduspjsl7j6p" path="res://Player-Character/Character.png" id="2_316bv"]
-[ext_resource type="PackedScene" uid="uid://c1gevcoxoirgk" path="res://Player-Character/camera.tscn" id="3_d87le"]
+[ext_resource type="PackedScene" uid="uid://c1gevcoxoirgk" path="res://Cameras/character_camera.tscn" id="3_3fyc4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fhn5q"]
 atlas = ExtResource("2_316bv")
@@ -49,5 +49,5 @@ sprite_frames = SubResource("SpriteFrames_cppra")
 frame = 2
 frame_progress = 0.479243
 
-[node name="Camera" parent="." instance=ExtResource("3_d87le")]
+[node name="CharacterCamera" parent="." instance=ExtResource("3_3fyc4")]
 zoom = Vector2(1.5, 1.5)

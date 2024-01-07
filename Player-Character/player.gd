@@ -24,10 +24,10 @@ func create_character(x, y, node) -> void:
 # Set character camera limit positions 
 # when character is created
 func set_character_camera_limit_positions(tl_x, tl_y, br_x, br_y):
-	characterInstance.top_left_x = tl_x
-	characterInstance.top_left_y = tl_y
-	characterInstance.bottom_right_x = br_x
-	characterInstance.bottom_right_y = br_y
+	characterInstance.camera_top_left_x = tl_x
+	characterInstance.camera_top_left_y = tl_y
+	characterInstance.camera_bottom_right_x = br_x
+	characterInstance.camera_bottom_right_y = br_y
 
 # Destroy character
 func destroy_character() -> void:
