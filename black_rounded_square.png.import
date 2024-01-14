@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://86eoexqc4cp3"
-path="res://.godot/imported/atlas.png-7b6d701721d40511b9cfca52325841a7.ctex"
+uid="uid://d4mhdw1vshb7a"
+path="res://.godot/imported/black_rounded_square.png-dac4f93da5efa293ece157b6ac9af92f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://atlas.png"
-dest_files=["res://.godot/imported/atlas.png-7b6d701721d40511b9cfca52325841a7.ctex"]
+source_file="res://black_rounded_square.png"
+dest_files=["res://.godot/imported/black_rounded_square.png-dac4f93da5efa293ece157b6ac9af92f.ctex"]
 
 [params]
 

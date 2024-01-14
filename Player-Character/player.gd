@@ -2,11 +2,11 @@ extends Node
 
 #region Character
 # Create character variable
-var character = null:
+var _character = null:
 	set(value):
-		character = value
+		_character = value
 	get:
-		return character
+		return _character
 
 # Character Scene and instance variable
 var characterInstance
@@ -15,14 +15,17 @@ var characterScene: PackedScene = preload("res://Player-Character/character.tscn
 # Instantiate the character into the scene
 func create_character(x, y, node) -> void:
 	characterInstance = characterScene.instantiate()
-	character = characterInstance
+	_character = characterInstance
 	get_parent().get_node(node).call_deferred("add_child", characterInstance)
 	characterInstance.global_position.x = x
 	characterInstance.global_position.y = y
-	characterInstance.player = self
+	characterInstance._player = self
 
 # Set character camera limit positions 
 # when character is created
+# This should be called after create_character()
+# and is the primary function for setting 
+# the character camera's limits
 func set_character_camera_limit_positions(tl_x, tl_y, br_x, br_y):
 	characterInstance.camera_top_left_x = tl_x
 	characterInstance.camera_top_left_y = tl_y
@@ -31,13 +34,19 @@ func set_character_camera_limit_positions(tl_x, tl_y, br_x, br_y):
 
 # Destroy character
 func destroy_character() -> void:
-	if character != null:
+	if _character != null:
 		characterInstance.queue_free()
 		remove_character()
 
+# Check if character exists
+func character_exists() -> bool:
+	if _character != null:
+		return true
+	return false
+
 # Remove the character reference
 func remove_character() -> void:
-	character = null
+	_character = null
 #endregion
 
 #region Input 

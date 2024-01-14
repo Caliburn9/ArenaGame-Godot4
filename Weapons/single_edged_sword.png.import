@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://86eoexqc4cp3"
-path="res://.godot/imported/atlas.png-7b6d701721d40511b9cfca52325841a7.ctex"
+uid="uid://bgayta6ritx33"
+path="res://.godot/imported/single_edged_sword.png-f8bff282feef3795dbc8ace6a4ab4925.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://atlas.png"
-dest_files=["res://.godot/imported/atlas.png-7b6d701721d40511b9cfca52325841a7.ctex"]
+source_file="res://Weapons/single_edged_sword.png"
+dest_files=["res://.godot/imported/single_edged_sword.png-f8bff282feef3795dbc8ace6a4ab4925.ctex"]
 
 [params]
 

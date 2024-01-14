@@ -1,5 +1,6 @@
 extends Node2D
 
+# Level Name for Character Instancing
 @export var level_name = ""
 
 #var xx = get_viewport().size.x / 2
@@ -8,8 +9,8 @@ extends Node2D
 var xx = 10
 var yy = 10
 
-func _physics_process(delta: float) -> void:
-	if Player.input_get_input("ui_accept"):
+func _physics_process(_delta: float) -> void:
+	if Player.input_get_input("ui_accept") && !Player.character_exists():
 		Player.create_character(xx, yy, level_name) 
 		Player.set_character_camera_limit_positions(0, 0, 511, 416)
 	

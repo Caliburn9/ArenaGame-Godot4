@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://br6ic4gag3g5n"]
+
+[ext_resource type="Texture2D" uid="uid://bgayta6ritx33" path="res://Weapons/single_edged_sword.png" id="1_nw7h5"]
+
+[node name="InventorySlotDisplay" type="CenterContainer"]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("1_nw7h5")
+stretch_mode = 5

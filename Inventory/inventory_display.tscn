@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw0i2n801ssr7"]
+
+[ext_resource type="Texture2D" uid="uid://d4mhdw1vshb7a" path="res://black_rounded_square.png" id="1_bimwv"]
+[ext_resource type="PackedScene" uid="uid://br6ic4gag3g5n" path="res://Inventory/inventory_slot_display.tscn" id="2_shhdr"]
+
+[node name="InventoryDisplay" type="TextureRect"]
+self_modulate = Color(1, 1, 1, 0.635294)
+custom_minimum_size = Vector2(64, 64)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = -84.0
+offset_right = -24.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("1_bimwv")
+
+[node name="InventorySlotDisplay" parent="." instance=ExtResource("2_shhdr")]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 64.0
+offset_bottom = 64.0
